@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var bakeryRouter = require('./routes/bakery');
 var starsRouter = require('./routes/stars');
+var slotRouter = require('./routes/slot');
 
 var app = express();
 
@@ -25,6 +26,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/bakery', bakeryRouter);
 app.use('/stars', starsRouter);
+app.use('/slot', slotRouter);
+
 
 
 
