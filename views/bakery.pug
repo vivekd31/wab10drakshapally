@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to the bakery pug
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let bakery = [
+                    {
+                        "Item name": "sandwich",
+                        "Quantity": 50,
+                        "price": "Ten USD"
+                    },
+                    {
+                        "Item name": "donut",
+                        "Quantity": 20,
+                        "price": "Five USD"
+                    },
+                    {
+                        "Item name": "Coke",
+                        "Quantity": 1,
+                        "price": "Ten USD"
+                    },                   
+                ]
+            each i in bakery
+                div(class="col-sm-2") #{i.Item name}
+                div(class="col-sm-2") #{i.Quantity}
+                div(class="col-sm-2") #{i.price}
